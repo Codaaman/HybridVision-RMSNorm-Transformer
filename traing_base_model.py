@@ -138,7 +138,7 @@ for k in range(epoch):
         print("best_accuracy")
         break
 
-torch.save(model.state_dict(),r"d:\python programing\game_automation\Assistance_with_recognation\personal_vision_2.pth") 
+torch.save(model.state_dict(),r"d:\python programing\game_automation\Assistance_with_recognation\personal_vision_2.pth")
 print("model_save")     
 
 
