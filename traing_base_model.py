@@ -1,5 +1,5 @@
 import torch
-from face_recognization import imageblock
+from Base_Model import imageblock
 import torch.nn as nn
 from torchvision.datasets import ImageFolder
 from sklearn.model_selection import train_test_split
