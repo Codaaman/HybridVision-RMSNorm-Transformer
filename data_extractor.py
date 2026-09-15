@@ -3,7 +3,6 @@
 # os.environ["HF_HOME"]=r"D:\Torch_frame_work\COMPUTER_VISION\facedata"
 # os.environ["HF_HUB_CACHE"] = r"D:\Torch_frame_work\COMPUTER_VISION\facedata\hub"
 # os.environ["HF_DATASETS_CACHE"] = r"D:\Torch_frame_work\COMPUTER_VISION\facedata\datasets"
-# os.environ["HF_TOKEN"]="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"
 # os.environ["HF_XET_HIGH_PERFORMANCE"]="1"
 # os.environ["HF_XET_NUM_CONCURRET_RANGE_GETS"]="16"
 # from datasets import load_dataset
