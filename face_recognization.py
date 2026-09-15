@@ -395,7 +395,7 @@ if __name__=="__main__":
         t.cuda.empty_cache()
         gc.collect()
                     
-    #t.save(model.state_dict(),"vision_version_1.pth")
+    t.save(model.state_dict(),"vision_version_1.pth")
 
 
 
