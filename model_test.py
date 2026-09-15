@@ -42,18 +42,13 @@ def my_model(img):
         result=Model(img)
         threshold=t.softmax(result,dim=1)
         thres,r=t.max(threshold,1)
-        #df=pd.read_csv(r"D:\Torch_frame_work\COMPUTER_VISION\images\fanmly.csv")
         print(r.item(), thres.item()*100)
         if r.item()==0 and thres.item()*100>=82:
-            #print(r,thres.item()*100)
             return "Aman"
         elif r.item()==1 and thres.item()*100>=82:
-            #print(r,thres.item()*100)
             return "Mummy"
         else:
-    
-            #print(r,thres.item()*100)
-            return "unknown"
+                return "unknown"
 
         
 
@@ -74,8 +69,6 @@ def speed(d):
     
 
     
-
-
 model=mp.BaseOptions
 dector=mp.vision.FaceDetector
 options=mp.vision.FaceDetectorOptions
@@ -115,26 +108,17 @@ with dector.create_from_options(options) as detector:
                 focal_length=720
 
                 dis=(real_size*focal_length)/image_size
-                # speed(dis)
-                # print(f"distsnce -> {dis} m/s")
-
+               
                 padding_ratio = 0.55 
                 pad_w = int(w * padding_ratio)
                 pad_h = int(h * padding_ratio)
 
-                # नए कोआर्डिनेट्स (ऊपर, नीचे, बाएं, दाएं मार्जिन बढ़ाना)
-                # नीचे (y2) की तरफ थोड़ा ज़्यादा मार्जिन दिया है ताकि गला और कंधा आ सके
                 x1 = max(0, x - pad_w)
                 y1 = max(0, y - pad_h)
 
                 x2 = min(w_img, x + w + pad_w)
                 y2 = min(h_img, y + h + int(pad_h * 1.5)) 
                 crop_img = img[y1:y2,x1:x2]
-                # thread = threading.Thread(target=my_model, args=(img,i))
-                # thread.start()
-                # thread.join()
-                # label=text.get(i)
-            
 
                 label=my_model(crop_img)
 
