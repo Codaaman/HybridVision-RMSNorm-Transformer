@@ -11,7 +11,7 @@ import mediapipe as mps
 import mediapipe.tasks as mp
 import os
 import threading
-from face_recognization import imageblock
+from Base_Model import imageblock
 from PIL import Image
 import time
 
